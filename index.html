@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora pro</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap3+++4.css">
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/v4-shims.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/fontawesome.min.css">
+</head>
+<body class="text-white"> 
+
+    <div class="container-fluid p-0 tudo">
+        
+        <div class="mais">
+            <div class="thumbnail text-center">
+                <span class="glyphicon glyphicon-user text-info"></span><br/> <span class="text-warning">Sobre o Desenvolvedor</span>
+                <div class="caption">
+                    <p class="text-center text-white"><b>Francisco Camalata Fuayenda Fetapi</b>,<em>17anos</em> e morador do <em>Akongo</em>,uma pequena rua próxima à <em>Santa Cruz,Lobito</em>.Estuda no <i><abbr title="Instituto Politécnico de Administração e Gestão">IPAG</abbr> do Luongo,Catumbela</i> a 12@ classe o curso de <b>Informática de Gestão</b></p>
+                </div>
+            </div>
+            <div class="thumbnail text-center">
+                <span class="glyphicon glyphicon-book text-info"></span><br/> <span class="text-warning">Sobre o Aplicativo</span>
+                <div class="caption">
+                    <p class="text-center text-white">Esta aplicação foi criada com fins de exercício;Isto quer dizer que eu não me preocupei muito em deixar ela 100% intuitiva e funcional.Ao estudar Js,me propus construir um simulador de uma calculadora, e aí está ela! </p>
+                </div>
+            </div>
+            <div class="thumbnail text-center">
+                <span class="fa fa-code text-info"></span><br/> <span class="text-warning">Sobre o Desenvolvimento</span>
+                <div class="caption">
+                    <p class="text-center text-white">Esta <em>'aplicaçãozinha'</em> foi criada com <b>HTML/CSS , javaScript,Jquery e bootstrap</b>.Usando estas tecnologias em conjunto construí este <em>'Appzinho'</em> numa tarde de Terça-Feira!</p>
+                </div>
+            </div>
+            <div class="rodape p-3 fixed-bottom text-center d-none">
+                &copy; Todos os direitos reservados - 2020
+            </div>
+
+        </div>
+        <div class="historico fixed-bottom">
+            <h4 class="text-center">Ainda não tem dados no historico</h4>
+            <ul class="media-list lista">
+               
+            </ul>
+            <span class="fa fa-trash p-3" style="font-size:28px;"></span>
+        </div>
+    
+        <header class="row">
+            <div class="col-xs-12 ops">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                <span>Francisco Calculadora</span>
+                <span class="float-right fa fa-history"></span>
+            </div>
+            <div class="col-xs-12 quadro mt-5">
+                <div class="entrada"></div>
+                <div class="saida"></div>
+            </div>
+        </header>
+ 
+        <main class="row fixed-bottom">  
+            <div class="col-xs-12">
+                <div class="btn-group">
+                    <button class="btn"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                    <button class="btn apagaE" onclick="apagaTudo('.entrada')">CE</button>
+                    <button class="btn apagaS" onclick="apagaTudo('.saida')">C</button>
+                    <button class="btn apaga" onclick="backspace()">&larr;</button>
+                    <button class="btn op divide"><span class="fa fa-divide"></span></button>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="btn-group">
+                    <button class="btn pi" onclick="$('.entrada').append(Math.PI)">&pi;</button>
+                    <button class="btn num">7</button>
+                    <button class="btn num">8</button>
+                    <button class="btn num">9</button>
+                    <button class="btn op vezes"><span class="fa fa-times"></span></button>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="btn-group">
+                    <button class="btn fat" onclick="">n!</button>
+                    <button class="btn num">4</button>
+                    <button class="btn num">5</button>
+                    <button class="btn num">6</button>
+                    <button class="btn op"><span class="fa fa-minus"></span></button>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="btn-group">
+                    <button class="btn invS" onclick="$('.saida').text(mudaSinal($('.entrada').text()))">&plusmn;</button>
+                    <button class="btn num">1</button>
+                    <button class="btn num">2</button>
+                    <button class="btn num">3</button>
+                    <button class="btn op plus"><span class="fa fa-plus"></span></button>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="btn-group">
+                    <button class="btn escreve">(</button>
+                    <button class="btn escreve">)</button>
+                    <button class="btn num">0</button>
+                    <button class="btn escreve">,</button>
+                    <button class="btn op" onclick="operar()">=</button>
+                </div>
+            </div>     
+        </main>
+
+    </div>
+
+    <div class="modal fade" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-danger">
+                <div class="modal-header p-0">
+                    <span class="close p-3" data-dismiss="modal">&times;</span>
+                    <h4 class=" text-white p-0 text-center">Lista de possiveis Erros<span class="fa fa-error"></span></h4>
+                </div>
+                <div class="modal-body text-white p-0">
+                    <ul class="list-group">
+                        <li class="list-group-item bg-danger">Número de parenteses incompativeis</li>
+                        <li class="list-group-item bg-danger">Operador sem qualquer operando</li>
+                        <li class="list-group-item bg-danger">Vírgula em excesso num único número</li>
+                    </ul>
+                </div>
+                <!-- <div class="modal-footer">
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
