@@ -2,7 +2,7 @@
 
 Este projeto foi criado em `maio de 2020`, numa época em que eu estava a dar os meus primeiros passos no **mundo do desenvolvimento**, foi inspirado na _Calculadora do Windows_.
 
-<img src="./asset1.PNG" width="320" height="400"/>
+<img src="./asset1.PNG" />
 
 # Especificações
 
