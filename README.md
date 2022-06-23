@@ -12,4 +12,6 @@ Como qualquer projeto simples feito por um iniciante,este projeto não tem **MUI
 2. Exibir um histórico dos cálculos recentes.
 3. Apresentar as informações do Desenvolvedor.
 
+##
+
 <a href="https://francisco-fetapi.github.io/calculadora-html-css-js/">Clique aqui se desejas ver o projeto rodando</a>
