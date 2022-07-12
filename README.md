@@ -1,4 +1,11 @@
 # Calculadora
+<p align="center">
+<a href="https://github.com/Francisco-Fetapi/calculadora-html-css-js/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Francisco-Fetapi/calculadora-html-css-js?style=plastic"></a>
+<a href="https://github.com/Francisco-Fetapi/calculadora-html-css-js"><img alt="GitHub license" src="https://img.shields.io/badge/Exercise-For%20trainning-orange"></a>
+<a href="https://github.com/Francisco-Fetapi/calculadora-html-css-js/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Francisco-Fetapi/calculadora-html-css-js?style=plastic"></a>
+<a href="https://github.com/Francisco-Fetapi/calculadora-html-css-js/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Francisco-Fetapi/calculadora-html-css-js?style=plastic"></a>
+<a href="https://github.com/Francisco-Fetapi/calculadora-html-css-js"><img alt="GitHub license" src="https://img.shields.io/github/license/Francisco-Fetapi/calculadora-html-css-js?style=plastic"></a>
+</p>
 
 Este projeto foi criado em `maio de 2020`, numa época em que eu estava a dar os meus primeiros passos no **mundo do desenvolvimento**, foi inspirado na _Calculadora do Windows_.
 
