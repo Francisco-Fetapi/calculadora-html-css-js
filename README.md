@@ -9,7 +9,8 @@
 
 Este projeto foi criado em `maio de 2020`, numa época em que eu estava a dar os meus primeiros passos no **mundo do desenvolvimento**, foi inspirado na _Calculadora do Windows_.
 
-<img src="./asset1.PNG" />
+![calculadora-html](https://user-images.githubusercontent.com/74926014/180439863-ba4420bf-e88b-4638-85ee-e6e181065e2f.gif)
+
 
 # Especificações
 
